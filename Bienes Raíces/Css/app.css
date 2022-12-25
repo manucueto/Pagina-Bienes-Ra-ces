@@ -1,0 +1,370 @@
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+html{
+    font-size: 62.5%;/*UN REM VALE 16PX, por lo tanto si le decimos al programa que tome el 
+    62.5% de ese tamaño se nos hará más facil calcular cuanto equivale cada rem ya que cada rem ahora va a valer 10px*/
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif; /*la fuente por default de nuestra pagina*/
+    font-size: 1.6rem; /*el tamaño por default de la fuente de nuestra pagina*/
+    line-height: 2;
+
+}
+/*---------------------------------------------------------------- GLOBALES ----------------------------------------------------------------------------------------------------------------------------------------------*/
+.contenedor{
+    max-width: 120rem; /*el ancho maximo que van a tomar nuestros item
+    (si un elemento tiene 100rem como tamaño se quedará así, si es más grande solo tendrá 120 rem como tamaño)*/
+    margin: 0 auto 0 auto; /*margenes entre items*/
+}
+
+img{
+    max-width: 100%;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+
+h2{
+    font-size: 3.4rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.6rem;
+}
+
+/*----------------------------------------------------------------UTILIDADES ----------------------------------------------------------------------------------------------------------------------------------------------*/
+.seccion{
+    margin-top: 2rem;
+    margin-bottom: 2rem
+    
+}
+.font300{
+    font-weight: 300;
+}
+.tcenter{
+    text-align: center
+}
+.d-block{
+    display: block!important;
+}
+.contenido-centrado{
+    max-width: 80rem;
+}
+
+/*---------------------------------------------------------------- HEADER ----------------------------------------------------------------------------------------------------------------------------------------------*/
+.contenido-header{
+    height: 100%; /*Para que podamos aprovechar todo el header*/
+    display: flex; /*Habilitamos el flex (Alinear horizontalmente por default)*/
+    flex-direction: column; /*Alineamos verticalmente*/
+    justify-content: space-between; /*Espacio entre items*/
+    
+}
+.contenido-header h1{
+    color: white;
+    padding-bottom:2rem;
+    max-width: 60rem;
+    line-height: 2; /*espacio entre lineas*/
+    font-size: 4rem;
+}
+.site-header{
+    background-color: #333333;
+    padding-bottom: 2rem;
+    padding-top: 1.5rem;
+}
+
+.site-header.inicio{
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh; /*view por heigth*/
+    min-height: 60rem;
+}
+.barra{
+    display: flex;
+    justify-content: space-between; /*space-evenly, flex-end, flex star, space-around*/
+    align-items: center;/*alineacion entre los items*/
+    padding-top: 1rem; /*margen top*/
+}
+
+/*---------------------------------------------------------------- NAVEGACIÓN ---------------------------------------------------------------------------------------------------------------------------------------------*/
+.navegacion a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+
+
+.navegacion a:hover{
+    color: bisque;
+}
+.navegacion a:last-of-type{
+    margin: 0;
+}
+
+.iconos-nosotros{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.icono:last-of-type{
+    margin-left: 0;
+    margin-right: 2rem;
+}
+
+
+.icono{
+    flex-basis: calc(30% - 1rem);
+    text-align: center; 
+    margin-left: 2rem;
+}
+
+.icono h3{
+    text-transform: uppercase; /*Capitalize para la primera letra mayúscula*/
+}
+.contenedor-anuncio{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+
+}
+.anuncio{
+    flex: 0 0 calc(33.3% - 1rem);/*crecer - disminuir - base*/
+    
+    border: 0.1rem solid #B5B5B5; /*Solid es el tipo de borde*/
+    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+    
+}
+.contenido-anuncio{
+    padding: 2rem;
+}
+
+.contenido-anuncio h3, .contenido-anuncio p{
+    margin: 0;
+}
+.precio {
+    color: rgb(56, 206, 56);
+    font-weight: 700;
+}
+/*---------------------------------------------------------------- BOTONES ----------------------------------------------------------------------------------------------------------------------------------------------*/
+.boton{
+    text-decoration: none;/*para quitarle la rayita del enlace*/
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 0.5rem 2rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+   
+    
+}
+.boton-amarillo{
+    background-color: #E08709;
+}
+.boton-verde{
+    background-color: #71b100;
+}
+
+.ver-todas{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bañito{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagen-contacto{
+    height: 40rem;
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.contenido-contacto{
+    flex: 1;
+    color: #ffffff;
+ 
+}
+.contenido-contacto p{
+    font-size: 1.8rem;
+
+}
+.iconito{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    max-width: 50rem;
+    flex: 1;
+}
+
+/*----------------------------------------------------------------PARTE INFERIOR ----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.seccion-inferior{
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion-inferior .blog{
+    flex-basis: 60%;
+}
+
+.seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem);
+}
+.entrada-blog {
+    display: flex;
+    line-height: 2.2rem;
+    margin-bottom: 2rem;
+}
+.entrada-blog h4{
+    color: #000000;
+   
+}
+.texto-entrada{
+    text-decoration: none;
+}
+
+.entrada-blog:last-of-type{
+    margin-bottom: 0;
+}
+.entrada-blog .imagen{
+    flex-basis: 40%;
+}
+
+.entrada-blog .texto-entrada{
+    flex-basis: calc(60% - 3rem);
+    padding-left: 2rem;
+}
+
+.texto-entrada h4::after{
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71b100;
+    margin-top: 1rem;
+}
+.texto-entrada a{
+    text-decoration: none;
+}
+
+.texto-entrada span{
+    color: #E08709;
+}
+
+/*----------------------------------------------------------------TESTIMONIALES----------------------------------------------------------------------------------------------------------------------------------------------*/
+.testimonial{
+    background-color: #71b100;
+    font-size: 2.4rem;
+    padding: 2em;
+    color: #ffffff;
+    border-radius: 2rem;
+}
+.testimonial p{
+    text-align: right;
+}
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width:4rem ;
+    height: 4rem;
+    display: block;
+    position: absolute;
+    left: -2rem;
+}
+
+.testimonial blockquote{
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+.footer{
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5rem;
+}
+.footer p{
+    color: #ffffff;
+    padding-right: 5rem;
+}
+
+/*----------------------------------------------------------------INTERNAS----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.contenido-nosotros{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2rem;
+}
+.texto-nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.resumen-propiedad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*h1{
+    color:blueviolet; para el color de la fuente
+    font-size: 50px; para el tamaño de la fuente
+}
+h2{
+    color:brown
+}
+
+#site-header {
+    background-color: yellow; Para modificar código especifico(id)
+}
+
+#site-header {
+    background-color: gray;
+    
+}
+.encabezado {
+    
+    color: green;
+}
+.site-header.inicio {
+    background: url(../img/header.jpg);
+}
+
+.encabezado {
+    color: indigo; Para modificar código especifico(class)
+}
+.mayuscula{
+    text-transform: uppercase;
+}*/
