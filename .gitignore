@@ -1,0 +1,59 @@
+# Entornos virtuales
+venv/
+env/
+.virtualenv/
+
+# Archivos compilados de Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+
+# Configuraciones de IDEs y editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de log
+*.log
+*.pot
+*.mo
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de dependencia
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Archivos relacionados con Django
+db.sqlite3
+instance/
+media/
+staticfiles/
+static/
+
+# Migraciones
+**/migrations/*
+
+# Archivos de configuración sensibles
+.env
+*.env
+.env.*
+secrets.json
+
+# Cache de Django
+*.log
+*.pot
+*.pyc
+*.pyo
+__pycache__/
+
+# Directorios de configuración local
+local_settings.py
+
+# Archivos generados por Docker si usas Docker
+docker-compose.override.yml
