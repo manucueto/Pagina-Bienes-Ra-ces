@@ -80,12 +80,12 @@ WSGI_APPLICATION = 'bienesraices_api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'bienesraices_db',
         'USER': 'admin',
         'PASSWORD': 'admin',
-        'HOST': 'localhost', 
-        'PORT': '3306',       
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

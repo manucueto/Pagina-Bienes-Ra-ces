@@ -1,21 +1,13 @@
 version: '3.8'
 
 services:
-  mysql:
-    image: mysql:8.0
+  postgres:
+    image: postgres:13
     environment:
-      MYSQL_DATABASE: bienesraices_db
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: admin
-      MYSQL_ROOT_PASSWORD: admin
+      POSTGRES_DB: bienesraices_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
     ports:
-      - "3306:3306"
+      - "5432:5432"
     volumes:
-      - ./mysql_data:/var/lib/mysql
-      # Puedes montar un archivo SQL similar para MySQL si lo deseas
-      # - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
-
-  adminer:
-    image: adminer
-    ports:
-      - "8080:8080"
+      - ./postgres_data:/var/lib/postgresql/data
