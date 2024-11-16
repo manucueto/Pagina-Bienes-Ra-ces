@@ -22,6 +22,7 @@ Asegúrate de tener instaladas las siguientes herramientas en tu máquina antes 
 - pip install djangorestframework
 - pip install coreapi
 - pip install setuptools
+- pip install -r requeriments.txt
 
 # Ejecutar
 - python manage.py migrate
