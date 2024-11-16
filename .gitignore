@@ -57,3 +57,5 @@ local_settings.py
 
 # Archivos generados por Docker si usas Docker
 docker-compose.override.yml
+
+mysql_data/
