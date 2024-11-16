@@ -12,6 +12,7 @@ Asegúrate de tener instaladas las siguientes herramientas en tu máquina antes 
 - **pip** (el gestor de paquetes de Python)
 - **Virtualenv** (opcional pero recomendado)
 
+
 # Crea entorno virtual
 - python -m venv venv
 
