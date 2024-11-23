@@ -137,6 +137,13 @@ h4{
     
 
 }
+.contenedor-anuncio-admin{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+
+}
 .anuncio{
     flex: 0 0 calc(33.3% - 1rem);/*crecer - disminuir - base*/
     

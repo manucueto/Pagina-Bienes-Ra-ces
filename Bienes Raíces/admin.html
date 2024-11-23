@@ -11,14 +11,9 @@
 </head>
 <body>
     <header class="site-header"> <!--Etiqueta para indicar que es un encabezado-->
-        
         <div class="contenedor contenido-header">
-            
-            
             <div class="barra">
-            
                 <img src="img/logo.svg" alt="">
-                
                 <nav class="navegacion"> <!--  Etiqueta que se usa para indicar que es una sección de navegación-->
                     <a href="nosotros.html">Nosotros</a>
                     <a href="anuncios.html">Anuncios</a>
@@ -27,15 +22,11 @@
                     <a href="propiedad.html">Añadir Propiedad</a>
                     <a href="admin.html">Administrar propiedades</a>
                 </nav>
-            
             </div>
-           
-        
         </div>
-    
     </header>
 
-    <div class="contenedor-anuncio">
+    <div class="contenedor-anuncio-admin">
         <div class="anuncio">
             <img src="img/anuncio1.jpg" alt="Anuncio casa en el campo">
             <div class="contenido-anuncio">
@@ -54,20 +45,18 @@
             </div>   
         </div>
         
-        <div class="anuncio">
+        <div class="anuncio" id="eliminar">
             <img src="img/anuncio3.jpg" alt="Anuncio casa en el campo">
             <div class="contenido-anuncio">
                 <h3>Eliminar Propiedad</h3>
                 <p>En este modulo, podras eliminar cualquiera de las propiedades que ya no esten disponibles</p>
-                <a href="anuncio.html" class="boton boton-amarillo d-block">Eliminar Propiedad</a>
+                <select id="select-casas">
+                    <!-- Opciones serán agregadas dinámicamente -->
+                </select>
+                <button id="boton-eliminar" class="boton boton-amarillo d-block">Eliminar Propiedad</button>
             </div>   
         </div>
-            
-       
-            
-        </div>
     </div>
-    
     
     <footer class="footer"> <!--parte inferior de una seccion-->
         <nav class="navegacion">
@@ -79,8 +68,6 @@
         <p>Todos los derechos reservados 2019 &copy</p>
     </footer>
 
-
+    <script src="./apiservice.js"></script> <!-- Asegúrate de que la ruta sea correcta -->
 </body>
 </html>
-<!--RECOMENDACIONES-->
-<!--1. Siempre tener un único nombre para cada id(ya que estos se usan para modificar solo una parte especifica de la pagina)-->
