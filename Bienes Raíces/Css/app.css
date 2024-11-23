@@ -166,8 +166,6 @@ h4{
     margin-top: 3rem;
     display: inline-block;
     text-align: center;
-   
-    
 }
 .boton-amarillo{
     background-color: #E08709;
@@ -326,8 +324,38 @@ h4{
     align-items: center;
 }
 
+/*----------------------------------------------------------------INTERNAS----------------------------------------------------------------------------------------------------------------------------------------------*/
 
+.property-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
 
+.property-form p {
+    margin: 0;
+}
+
+.property-form input {
+    border-radius: 8px;
+    border-color: #E08709;
+    border-style: solid;
+}
+
+.property-form input:focus {
+    border-color: #71b100;
+}
+
+.property-form button {
+    border-radius: 12px;
+    border: none;
+    padding: 12px;
+}
+
+.property-form button:hover {
+    background-color: #E08709;
+}
 
 
 
