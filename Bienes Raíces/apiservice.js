@@ -21,4 +21,16 @@ async function cargarCasas() {
     });
 }
 
+async function crearCasa(houseData) {
+    const response = await fetch('http://localhost:8000/houses/api/houses/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(houseData),
+    });
+    const casa = await response.json();
+    console.log(casa);
+}
+
 document.addEventListener('DOMContentLoaded', cargarCasas);
