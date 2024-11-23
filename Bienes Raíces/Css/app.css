@@ -357,6 +357,13 @@ h4{
     background-color: #E08709;
 }
 
+.property-form select {
+    border-radius: 8px;
+    border-color: #E08709;
+    border-style: solid;
+    background-color: #ffffff;
+}
+
 
 
 
