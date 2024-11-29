@@ -11,14 +11,9 @@
 </head>
 <body>
     <header class="site-header"> <!--Etiqueta para indicar que es un encabezado-->
-        
         <div class="contenedor contenido-header">
-            
-            
             <div class="barra">
-            
                 <img src="img/logo.svg" alt="">
-                
                 <nav class="navegacion"> <!--  Etiqueta que se usa para indicar que es una sección de navegación-->
                     <a href="nosotros.html">Nosotros</a>
                     <a href="anuncios.html">Anuncios</a>
@@ -27,46 +22,37 @@
                     <a href="propiedad.html">Añadir Propiedad</a>
                     <a href="admin.html">Administrar propiedades</a>
                 </nav>
-            
             </div>
-           
-        
         </div>
-    
     </header>
 
-    <form action="submit" class="property-form">
+    <form id="property-form" class="property-form">
         <p>Nombre de la propiedad</p>
         <input type="text" id="property-name">
-
-        <p>Tipo de Propiedad</p>
-        <select name="Tipo de propiedad" id="property-type">
-            <option value="casa">Casa</option>
-            <option value="apartamento">Apartamento</option>
-            <option value="terreno">Terreno</option>
-        </select>
 
         <p>Dirección</p>
         <input type="text" id="property-address">
 
+        <p>Descripción</p>
+        <input type="text" id="property-description">
+
         <p>Metros cuadrados</p>
-        <input type="text" id="property-meters">
+        <input type="number" id="property-meters">
 
         <p>Numero de baños</p>
-        <input type="text" id="property-baths">
+        <input type="number" id="property-baths">
 
         <p>Numero de habitaciones</p>
-        <input type="text" id="property-rooms">
+        <input type="number" id="property-rooms">
 
         <p>Estacionamiento</p>
-        <input type="text" id="property-parking">
+        <input type="number" id="property-parking">
         
         <p>Precio</p>
-        <input type="text" id="property-price">
+        <input type="number" id="property-price">
 
-        <button class="boton boton-verde">Añadir Propiedad</button>
+        <button type="submit" class="boton boton-verde">Añadir Propiedad</button>
     </form>
-    
     
     <footer class="footer"> <!--parte inferior de una seccion-->
         <nav class="navegacion">
@@ -78,8 +64,26 @@
         <p>Todos los derechos reservados 2019 &copy</p>
     </footer>
 
+    <script src="./apiservice.js"></script>
+    <script>
+        document.getElementById('property-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
 
+            const houseData = {
+                title: document.getElementById('property-name').value,
+                location: document.getElementById('property-address').value,
+                description: document.getElementById('property-description').value,
+                price: parseFloat(document.getElementById('property-price').value),
+                rooms: parseInt(document.getElementById('property-rooms').value),
+                bathrooms: document.getElementById('property-baths').value,
+                parking: parseInt(document.getElementById('property-parking').value),
+                size: parseInt(document.getElementById('property-meters').value),
+            };
+
+            await crearCasa(houseData);
+            document.getElementById('property-form').reset();
+            window.location.href = 'admin.html';
+        });
+    </script>
 </body>
 </html>
-<!--RECOMENDACIONES-->
-<!--1. Siempre tener un único nombre para cada id(ya que estos se usan para modificar solo una parte especifica de la pagina)-->

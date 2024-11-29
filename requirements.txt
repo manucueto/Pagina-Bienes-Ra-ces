@@ -1,0 +1,6 @@
+distlib==0.3.9
+filelock==3.16.1
+numpy==2.1.2
+platformdirs==4.3.6
+PuLP==2.9.0
+virtualenv==20.27.1
